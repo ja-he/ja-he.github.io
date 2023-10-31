@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="/base.css"/>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Hensel</title>
+  
+  <div class="nav">
+    <a href=https://ztf.lol>🏡 back home</a>
+    <a href=https://ztf.lol/projects>🚧 back to projects</a>
+  </div>
+  <link rel="stylesheet" href="/project.css"/>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+
+<div class="repo-extra-stuff">
+  <h1 class="title">zet (deprecated)</h1>
+  
+  
+  
+</div>
+
+<ul>
+<li>It's just a janky <a href="https://github.com/ja-he/dotfiles/blob/master/scripts/zet">script in my dotfiles repo</a></li>
+</ul>
+<p>This probably comes with the biggest <strong>&quot;DON'T USE THIS&quot;</strong> warning out of all my personal projects.
+Not only is it just a bash script among many in my dotfiles, I'm not even sure that it works quite right; just well enough that I get by and have no urgent need to sit down and make sure.</p>
+<p>But what is it?<br />
+Simply, its a notes management script.
+Zettelkasten is a term for a notetaking system that you can find somewhere around one billion articles and blog posts about on the internet.
+I'm not so sure that the system I've currently landed on is exactly in line with the core principles of Zettelkasten, but it works for me.<br />
+It basically eliminates just enough of the mental overhead of notetaking and -keeping for me, to streamline the process enough that I can write fairly unimpeded.</p>
+<p>I've used it for about a year now and I'm very happy with it.<br />
+Previously, taking a new note would involve thinking if I wanted it to be a simple quick thing or a long-living document.
+Should I use LaTeX or just Markdown; if Markdown, would I maybe want to reference a paper and would need to use citeproc and maybe have an extra BibTeX file, or maybe reference a global one filled with a whole bunch of references, ...</p>
+<p>My zet script helped me simplify the process, mostly just by settling on some idioms for myself:</p>
+<ul>
+<li>Have a single top-level directory for pretty much all notes.</li>
+<li>Categorize them only high-level, mostly in terms of context (i.E. what context of my life I <em>would</em> share this with).<br />
+For me this meant: <code>public</code>, <code>private</code> (roughly: diary), <code>&lt;school project&gt;</code>, <code>work</code>, <code>cooking</code></li>
+<li>Have some simple aliases for <code>fzf</code> search commands (<code>zet filesearch</code>)</li>
+<li>Try to define some common idioms for images so I can quickly add a standalone image and still know later what it's from or about (basically: standardize metadata title and source)</li>
+</ul>
+<h1 id="try-it">Try it!</h1>
+<p>No, actually don't.
+If you're looking for simple notetaking, there's probably great solutions out there that do what this does for me but way better.
+Find something that helps you get started with an empty note quickly, categorize only minimally (maybe: publically sharable, work, university, personal/diary) to avoid analysis paralysis and find some solution to synchronizing across devices (for me this was just Git, but maybe Syncthing would work better for you).</p>
+
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2022 Jan Hensel.</p>
+      <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </div>
+  </footer>
+</body>
+</html>

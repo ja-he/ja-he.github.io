@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="/base.css"/>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Hensel</title>
+  
+  <div class="nav">
+    <a href=https://ztf.lol>🏡 back home</a>
+    <a href=https://ztf.lol/projects>🚧 back to projects</a>
+  </div>
+  <link rel="stylesheet" href="/project.css"/>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+
+<div class="repo-extra-stuff">
+  <h1 class="title">potato-sat</h1>
+  <img src="&#x2F;projects&#x2F;potatosat&#x2F;potato-sat.png" class="project-img"/>
+  
+  
+</div>
+
+<ul>
+<li><a href="https://gitlab.informatik.uni-bremen.de/ja_he/potato-sat">University GitLab repository</a></li>
+</ul>
+<p>This is a <em>very elementary</em> SAT solver.
+I wrote it for a systems design course at my university in which we dealt a lot with formal verification (where solving SAT of course plays a huge role).</p>
+<p>As a basic SAT solver, it works well enough.
+The course resulted in another small project that converted sudoku puzzles into boolean expressions (specifically in CNF written to DIMACS files).
+Using that tool potato-sat could be used to solve regular sudoku puzzles very nicely.
+But as their size increases, complexity of course explodes.
+And as I didn't get very far in implementing the SAT-solving improvements people have come up with since the sixties, my little solver is basically stuck back then and even on modern hardware is quickly overwhelmed by a bigger expression.</p>
+<p>As you can tell from the little logo I made for it, I had a lot of fun with this project and learned a lot, especially as it was my first real C++ project.</p>
+<p><img src="potato-sat.png" alt="potato-sat logo" style="height:5em;
+image-rendering:pixelated;"></p>
+<p>Eventually™ I'll get back to this project, dig out my old notes from the course, and really implement it all properly. :^)</p>
+
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2022 Jan Hensel.</p>
+      <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </div>
+  </footer>
+</body>
+</html>

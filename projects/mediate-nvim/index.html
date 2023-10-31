@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="/base.css"/>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Hensel</title>
+  
+  <div class="nav">
+    <a href=https://ztf.lol>🏡 back home</a>
+    <a href=https://ztf.lol/projects>🚧 back to projects</a>
+  </div>
+  <link rel="stylesheet" href="/project.css"/>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+
+<div class="repo-extra-stuff">
+  <h1 class="title">mediate.nvim</h1>
+  
+  
+  
+</div>
+
+<ul>
+<li><a href="https://github.com/ja-he/mediate.nvim">Repository</a></li>
+</ul>
+<p>This is a small Neovim extension for resolving Git conflicts.</p>
+<h3 id="background">Background</h3>
+<p>Proofreading for a friend, I suddenly had a bunch of conflicts to deal with from my corrections on one branch clashing with some of the merged corrections on the main branch.
+My process for resolving was straightforward:</p>
+<ul>
+<li>copy conflict in full</li>
+<li>open new tab and do <code>:vnew</code>, such that I have two splits, side by side</li>
+<li>paste the conflict such that one side on one side, other on the other (always took some manual editing to remove the markers and whatnot)</li>
+<li>do <code>:windo diffthis</code>; this adds both splits to a diff list and basically just uses Vim's diff mode on the two splits, rather convenient</li>
+<li>resolve the conflict (usually five lines or so) and copy the resolved version back in place of the initial conflict</li>
+</ul>
+<p>Obviously, this called for a plugin.
+Since I was looking to learn more about hacking Neovim with its Lua interface, I was happy for the opportunity too, but so far I've only had time to get a basic version done;
+probably good enough, but could be a bit nicer.</p>
+
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2022 Jan Hensel.</p>
+      <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </div>
+  </footer>
+</body>
+</html>

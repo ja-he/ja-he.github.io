@@ -1,0 +1,50 @@
+.project-ref {
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  min-height: 2em;
+  padding: 0.5em;
+  max-width: 12em;
+  grid-area: 2 / 1 / 3 / 2;
+
+  display: grid;
+  grid-template-columns: 1fr 2em;
+  justify-items: center;
+  grid-gap: 1em;
+}
+
+.project-ref:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.10);
+}
+
+.repo-host-ref-img {
+  max-height: 2em;
+  border-radius: 0.5em;
+  margin: auto;
+
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.ref-text {
+  margin: auto 0;
+
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.project-img {
+  max-height: 6em;
+
+  margin: auto auto;
+  grid-area: 1 / 2 / 3 / 3;
+}
+
+.repo-extra-stuff {
+  display: grid;
+  grid-template-columns: 1fr 10em;
+}
+
+/* @media (min-width: 60em) { */
+/*   .repo-extra-stuff { */
+/*   } */
+/* } */

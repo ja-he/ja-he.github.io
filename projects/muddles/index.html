@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="/base.css"/>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jan Hensel</title>
+  
+  <div class="nav">
+    <a href=https://ztf.lol>🏡 back home</a>
+    <a href=https://ztf.lol/projects>🚧 back to projects</a>
+  </div>
+  <link rel="stylesheet" href="/project.css"/>
+
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      
+
+<div class="repo-extra-stuff">
+  <h1 class="title">muddles</h1>
+  
+  
+  
+  <a href="https:&#x2F;&#x2F;github.com&#x2F;namib-project&#x2F;muddles" class="project-ref"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" class="repo-host-ref-img"/><span class="ref-text">Check out the project repository!</span></a>
+  
+</div>
+
+<p>Muddles is a language server for the <em>Manufacturer Usage Description</em> (MUD) format defined in <a href="https://datatracker.ietf.org/doc/html/rfc8520">RFC8520</a>.<br />
+It is written in <a href="https://www.rust-lang.org/">Rust</a> using the <a href="https://crates.io/crates/tower-lsp">tower-lsp</a> crate and uses <a href="https://tree-sitter.github.io/tree-sitter/">Tree-sitter</a> to handle the parsing to a syntax tree.</p>
+<p>I wrote it in the context of the <a href="https://namib.me/">NAMIB student project</a> in my master's degree program at the University of Bremen.</p>
+<p>In its current state it is merely a proof of concept.
+Hopefully I manage the time to flesh it out enough to be actually useful when working with MUD files (and worth the hassle of setting it up).</p>
+<h1 id="try-it">Try it!</h1>
+<p>Building the binary from the repo should be as simple as <code>cargo build</code> if you've already built Rust binaries before.<br />
+However, actually using it with your editor (besides obviously needing a MUD file as a test subject) you'll need to configure your editor to use the binary, and I can't tell you how to do that for most editors.<br />
+For Neovim -- if you're already using <a href="https://github.com/neovim/nvim-lspconfig">lspconfig</a> -- it should roughly look like this:</p>
+<pre data-lang="lua" style="background-color:#eff1f5;color:#4f5b66;" class="language-lua "><code class="language-lua" data-lang="lua"><span style="color:#b48ead;">local </span><span style="color:#bf616a;">lspconfig </span><span>= </span><span style="color:#96b5b4;">require</span><span>&#39;</span><span style="color:#a3be8c;">lspconfig</span><span>&#39;
+</span><span style="color:#b48ead;">local </span><span style="color:#bf616a;">configs </span><span>= </span><span style="color:#96b5b4;">require</span><span>&#39;</span><span style="color:#a3be8c;">lspconfig.configs</span><span>&#39;
+</span><span>
+</span><span style="color:#a7adba;">-- ...
+</span><span>
+</span><span style="color:#b48ead;">if </span><span>not </span><span style="color:#bf616a;">configs</span><span>.muddles </span><span style="color:#b48ead;">then
+</span><span>  </span><span style="color:#bf616a;">configs</span><span>.muddles = {
+</span><span>    </span><span style="color:#a3be8c;">default_config </span><span>= {
+</span><span>      </span><span style="color:#a3be8c;">cmd </span><span>= {&#39;</span><span style="color:#a3be8c;">/path/to/my/binary/called/muddles</span><span>&#39;};
+</span><span>      </span><span style="color:#a3be8c;">filetypes </span><span>= {&#39;</span><span style="color:#a3be8c;">mud</span><span>&#39;};
+</span><span>      </span><span style="color:#8fa1b3;">root_dir </span><span>= </span><span style="color:#b48ead;">function</span><span>(fname)
+</span><span>        </span><span style="color:#b48ead;">return </span><span style="color:#bf616a;">lspconfig</span><span>.util.path.</span><span style="color:#bf616a;">dirname</span><span>(</span><span style="color:#bf616a;">fname</span><span>)
+</span><span>      </span><span style="color:#b48ead;">end</span><span>;
+</span><span>      </span><span style="color:#a3be8c;">settings </span><span>= {};
+</span><span>    };
+</span><span>  }
+</span><span style="color:#b48ead;">end
+</span><span style="color:#bf616a;">lspconfig</span><span>.muddles.</span><span style="color:#bf616a;">setup</span><span>{}
+</span></code></pre>
+
+
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2022 Jan Hensel.</p>
+      <p>Created with <a href="https://www.getzola.org/">Zola</a></p>
+    </div>
+  </footer>
+</body>
+</html>
